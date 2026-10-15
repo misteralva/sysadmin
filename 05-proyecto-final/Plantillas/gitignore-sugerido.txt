@@ -1,0 +1,94 @@
+# ============================================================
+# .gitignore sugerido para el proyecto final
+# Cópialo a la raíz de tu repositorio como ".gitignore"
+# (quita la extensión .txt y añade el punto inicial)
+#
+# IMPORTANTE: este archivo solo evita subir cosas por ACCIDENTE.
+# NO es una garantía: antes de cada "git push" revisa con
+#   git status
+#   git diff --staged
+# Si subes un secreto por error, considéralo COMPROMETIDO:
+# cámbialo, no basta con borrarlo del repositorio (queda en el
+# historial).
+# ============================================================
+
+# --- Claves privadas y certificados con clave ---
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+id_ecdsa
+*_rsa
+*_ed25519
+privatekey
+privada.key
+wg-private*
+*.keystore
+
+# --- Configuraciones de VPN con claves dentro ---
+# (sube versiones SANITIZADAS con <CLAVE-PRIVADA> en su lugar)
+wg0.conf
+*.ovpn
+
+# --- Contraseñas, tokens y variables de entorno ---
+.env
+.env.*
+*.secret
+*.secrets
+secrets.*
+credenciales*
+passwords*
+contraseñas*
+.vault_pass*
+vault-password*
+
+# --- Ansible: contraseñas y vault sin cifrar ---
+*.retry
+vault_pass.txt
+
+# --- Máquinas virtuales e imágenes ---
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+*.iso
+*.img
+*.qcow2
+*.vbox
+*.vbox-prev
+Snapshots/
+Logs/
+
+# --- Volcados y copias de seguridad ---
+*.bak
+*.dump
+*.sql
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.wim
+*.bkf
+*.evtx
+*.ldif.backup
+
+# --- Informes y registros que pueden contener datos sensibles ---
+lynis-report.dat
+lynis.log
+*.pcap
+*.pcapng
+auth.log*
+/evidencias-sin-revisar/
+
+# --- Archivos del sistema y de editores ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
